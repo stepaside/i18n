@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace i18n.Web.Mvc.Mvc
+namespace i18n.Web.Mvc
 {
     public abstract class i18nWebViewPage<T> : WebViewPage<T>
     {
