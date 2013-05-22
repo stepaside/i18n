@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("i18n")]
+[assembly: AssemblyTitle("i18n.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Conatus Creative Inc. ")]
-[assembly: AssemblyProduct("i18n")]
-[assembly: AssemblyCopyright("Copyright © Conatus Creative Inc. 2012")]
+[assembly: AssemblyCompany("ASI")]
+[assembly: AssemblyProduct("i18n.Web")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1453a162-aca1-4756-84ab-46bd2286444d")]
+[assembly: Guid("7517e41b-e30d-44bf-9877-bcd58380203c")]
 
 // Version information for an assembly consists of the following four values:
 //

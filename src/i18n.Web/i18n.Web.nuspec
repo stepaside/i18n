@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>I18N.Web</id>
+    <version>1.0.0</version>
+    <authors>Max Stepanskiy</authors>
+    <owners>ASI</owners>
+    <summary>Base classe for ASP.NET MVC and Web API</summary>
+	  <description>
+    Smart internationalization for ASP.NET MVC and Web API apps;
+    Base classes for controller, views and api controller.
+    </description>
+    <language>en-US</language>
+    <tags>i18n localization globalization MVC WebApi</tags>
+    <dependencies>
+      <dependency id="I18N" version="2.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi" version="4.0.20710.0" />      
+    </dependencies>
+  </metadata>
+</package>

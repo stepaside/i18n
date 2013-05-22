@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>i18n</RootNamespace>
     <AssemblyName>i18n</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,18 +28,20 @@
     <NoWarn>1591 1573</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\lib\net40\</OutputPath>
+    <OutputPath>..\..\bin\lib\net4.5\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\bin\lib\net40\i18n.xml</DocumentationFile>
+    <DocumentationFile>..\..\bin\lib\net4.5\i18n.xml</DocumentationFile>
     <NoWarn>1591 1573</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -49,7 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="container">
-      <HintPath>..\packages\container.0.0.4\lib\net40\container.dll</HintPath>
+      <HintPath>..\packages\container.1.1.0\lib\net40\container.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -63,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IRootServices.cs" />
+    <Compile Include="Web\UI\ControlExtensions.cs" />
     <Compile Include="EarlyUrlLocalizer.cs" />
     <Compile Include="Abstract\IEarlyUrlLocalizer.cs" />
     <Compile Include="Abstract\INuggetLocalizer.cs" />
@@ -86,15 +90,14 @@
     <Compile Include="UrlLocalizer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\i18n.Domain\i18n.Domain.csproj">
       <Project>{bc2104ab-dc34-45b3-ab4d-3035f11fbdb8}</Project>
       <Name>i18n.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
