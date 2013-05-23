@@ -173,7 +173,7 @@ namespace i18n.Domain.Concrete
                 }
                 else if (line.StartsWith("msgid "))
                 {
-                    current.Id = line.Substring(6);
+                    current.Id = line.Substring(6).Trim('\"');
                 }
             }
 
