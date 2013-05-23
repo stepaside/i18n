@@ -75,9 +75,7 @@ namespace i18n.Domain.Concrete
                                 }
                             }
                         }
-
                     }
-
                 }
             }
 
