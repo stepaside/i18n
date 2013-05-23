@@ -59,7 +59,6 @@ namespace i18n.Domain.Concrete
 					if (!blacklistFound)
 					{
 
-
 						//we check every filePath against our white list. if it's on there in at least one form we check it.
 						foreach (var whiteListItem in fileWhiteList)
 						{

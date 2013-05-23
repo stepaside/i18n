@@ -10,8 +10,7 @@ namespace i18n.Helpers
         /// <summary>
         /// String extension method to simplify testing for non-null/non-empty values.
         /// </summary>
-        public static bool IsSet(
-            this string str)
+        public static bool IsSet(this string str)
         {
             return !string.IsNullOrEmpty(str);
         }
@@ -22,9 +21,12 @@ namespace i18n.Helpers
         public static int LineFromPos(this string S, int Pos)
         {
             int Res = 1;
-            for (int i = 0; i < Pos; i++) {
-                if (S[i] == '\n') {
-                    Res++; }
+            for (int i = 0; i < Pos; i++)
+            {
+                if (S[i] == '\n')
+                {
+                    Res++;
+                }
             }
             return Res;
         }

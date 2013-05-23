@@ -48,10 +48,13 @@ namespace i18n.PostBuild
 	        var items = nugget.ParseAll();
 	        rep.SaveTemplate(items);
 
+            GetTextNuggetFinder gettext = new GetTextNuggetFinder(settings);
+            items = gettext.ParseAll();
+            rep.SaveTemplate(items);
+
 			TranslationMerger ts = new TranslationMerger(rep);
 			ts.MergeAllTranslation(items);
 			
-
             Console.WriteLine("i18n.PostBuild completed successfully.");
         }
     }

@@ -347,5 +347,42 @@ namespace i18n.Domain.Concrete
 
 		#endregion
 
-	}
+        #region gettext Directory
+
+        private const string _gettextDirectory = "tools\\gettext";
+
+        public string GetTextDirectory
+        {
+            get
+            {
+                string prefixedString = GetPrefixedString("GetTextDirectory");
+                string directory = _settingService.GetSetting(prefixedString) ?? _gettextDirectory;
+                var path = MakePathAbsoluteAndFromConfigFile(directory);
+                return path;
+            }
+            set
+            {
+                string prefixedString = GetPrefixedString("GetTextDirectory");
+				_settingService.SetSetting(prefixedString, value);
+            }
+        }
+
+        public string XGetTextPath
+        {
+            get
+            {
+                return Path.Combine(GetTextDirectory, "xgettext.exe");
+            }
+        }
+
+        public string MsgMergePath
+        {
+            get
+            {
+                return Path.Combine(GetTextDirectory, "msgmerge.exe");
+            }
+        }
+
+        #endregion
+    }
 }
