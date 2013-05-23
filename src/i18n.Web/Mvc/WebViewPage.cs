@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace i18n.Web.Mvc
 {
-    public abstract class i18nWebViewPage<T> : WebViewPage<T>
+    public abstract class WebViewPage<T> : System.Web.Mvc.WebViewPage<T>
     {
         /// <summary>
         /// Returns markup where the passed value string is wrapped with double quotes,
@@ -61,7 +61,7 @@ namespace i18n.Web.Mvc
         }
     }
 
-    public abstract class i18nWebViewPage : WebViewPage
+    public abstract class WebViewPage : System.Web.Mvc.WebViewPage
     {
         public IHtmlString _(string text)
         {

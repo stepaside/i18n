@@ -12,11 +12,11 @@ namespace i18n.Domain.Concrete
 {
 	public class FileNuggetFinder : INuggetFinder
 	{
-		private i18nSettings _settings;
+		private Settings _settings;
 
         private NuggetParser _nuggetParser;
 
-		public FileNuggetFinder(i18nSettings settings)
+		public FileNuggetFinder(Settings settings)
 		{
 			_settings = settings;
             _nuggetParser = new NuggetParser(new NuggetTokens(

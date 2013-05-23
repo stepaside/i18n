@@ -55,7 +55,7 @@
     <Compile Include="Abstract\ITranslationRepository.cs" />
     <Compile Include="Concrete\CacheHandler.cs" />
     <Compile Include="Concrete\FsCacheDependency.cs" />
-    <Compile Include="Concrete\i18nSettings.cs" />
+    <Compile Include="Concrete\Settings.cs" />
     <Compile Include="Concrete\FileNuggetFinder.cs" />
     <Compile Include="Concrete\TranslationMerger.cs" />
     <Compile Include="Concrete\WebConfigSettingService.cs" />

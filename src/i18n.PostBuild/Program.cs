@@ -24,6 +24,11 @@ namespace i18n.PostBuild
 	        try
 	        {
 		        configPath = args[0];
+                if (Path.GetExtension(configPath) != ".config")
+                {
+                    configPath = Path.Combine(configPath, "web.config");
+                }
+
 				using (FileStream fs = File.Open(configPath, FileMode.Open))
 		        {
 			        
@@ -36,7 +41,7 @@ namespace i18n.PostBuild
 	        }
 
 			//todo: this assumes PO files, if not using po files then other solution needed.
-			i18nSettings settings = new i18nSettings(new WebConfigSettingService(configPath));
+			Settings settings = new Settings(new WebConfigSettingService(configPath));
 			POTranslationRepository rep = new POTranslationRepository(settings);
 
 			FileNuggetFinder nugget = new FileNuggetFinder(settings);

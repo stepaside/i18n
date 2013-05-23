@@ -74,9 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Http\i18nApiController.cs" />
-    <Compile Include="Mvc\i18nController.cs" />
-    <Compile Include="Mvc\i18nWebViewPage.cs" />
+    <Compile Include="Http\ApiController.cs" />
+    <Compile Include="Mvc\Controller.cs" />
+    <Compile Include="Mvc\WebViewPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

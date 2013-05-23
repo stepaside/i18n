@@ -6,11 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.Controllers;
 
 namespace i18n.Web.Http
 {
-    public abstract class i18nApiController : ApiController
+    public abstract class ApiController : System.Web.Http.ApiController
     {
         private LanguageItem[] _userLanguages = null;
 

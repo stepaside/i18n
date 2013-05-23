@@ -21,7 +21,7 @@ namespace i18n
         {
             _textLocalizer = textLocalizer;
 
-            i18nSettings settings = new i18nSettings(new WebConfigSettingService(null));
+            Settings settings = new Settings(new WebConfigSettingService(null));
             _nuggetParser = new NuggetParser(new NuggetTokens(
 			    settings.NuggetBeginToken,
 			    settings.NuggetEndToken,

@@ -17,9 +17,9 @@ namespace i18n.Domain.Concrete
 {
 	public class POTranslationRepository : ITranslationRepository
 	{
-		private i18nSettings _settings;
+		private Settings _settings;
 
-		public POTranslationRepository(i18nSettings settings)
+		public POTranslationRepository(Settings settings)
 		{
 			_settings = settings;
 		}

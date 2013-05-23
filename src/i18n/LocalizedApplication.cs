@@ -146,7 +146,7 @@ namespace i18n
             // The client app may subsequerntly override any of these.
             // NB: we are registering the factory functions/delegates here, not actually
             // creating the services instances.
-            Container.Register<ITranslationRepository>(r => new POTranslationRepository(new i18nSettings(new WebConfigSettingService(null)))); 
+            Container.Register<ITranslationRepository>(r => new POTranslationRepository(new Settings(new WebConfigSettingService(null)))); 
             Container.Register<IUrlLocalizer>(r => new UrlLocalizer());
             Container.Register<ITextLocalizer>(r => new TextLocalizer(TranslationRepositoryService)); 
             Container.Register<IEarlyUrlLocalizer>(r => new EarlyUrlLocalizer(UrlLocalizerService));
