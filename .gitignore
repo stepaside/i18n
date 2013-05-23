@@ -33,3 +33,10 @@ Examples*/
 *.testrunconfig
 publish.xml
 TestResults
+I18N.2.0.0.nupkg
+src/i18n.Web/I18N.Web.1.0.0.nupkg
+src/packages/container.1.1.0/container.1.1.0.nupkg
+src/packages/container.1.1.0/lib/net40/container.dll
+src/packages/container.1.1.0/LICENSE.md
+src/packages/container.1.1.0/README.md
+src/packages/Microsoft.AspNet.WebApi.Client.4.0.30506.0/lib/net40/System.Net.Http.Formatting.xml
