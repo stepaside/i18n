@@ -157,21 +157,21 @@ namespace i18n.Domain.Concrete
                     continue;
                 }
 
-                if (line.StartsWith("#:"))
+                if (line.StartsWith("#: "))
                 {
                     if (current.References == null)
                     {
                         current.References = new List<string>();
                     }
-                    ((List<string>)current.References).Add(line);
+                    ((List<string>)current.References).Add(line.Substring(3));
                 }
-                else if (line.StartsWith("#.") || line.StartsWith("# "))
+                else if (line.StartsWith("#. ") || line.StartsWith("#  "))
                 {
                     if (current.Comments == null)
                     {
                         current.Comments = new List<string>();
                     }
-                    ((List<string>)current.Comments).Add(line);
+                    ((List<string>)current.Comments).Add(line.Substring(3));
                 }
                 else if (line.StartsWith("msgid "))
                 {

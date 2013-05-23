@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using i18n.Domain.Concrete;
 using i18n.Domain.Entities;
 
@@ -43,18 +44,23 @@ namespace i18n.PostBuild
 			//todo: this assumes PO files, if not using po files then other solution needed.
 			Settings settings = new Settings(new WebConfigSettingService(configPath));
 			POTranslationRepository rep = new POTranslationRepository(settings);
+            TranslationMerger ts = new TranslationMerger(rep);
 
 			FileNuggetFinder nugget = new FileNuggetFinder(settings);
-	        var items = nugget.ParseAll();
-	        rep.SaveTemplate(items);
-
+	        var items1 = nugget.ParseAll();
+            
             GetTextNuggetFinder gettext = new GetTextNuggetFinder(settings);
-            items = gettext.ParseAll();
-            rep.SaveTemplate(items);
+            var items2 = gettext.ParseAll();
 
-			TranslationMerger ts = new TranslationMerger(rep);
-			ts.MergeAllTranslation(items);
-			
+            var items = items1;
+            foreach (var item in items2)
+            {
+                items[item.Key] = item.Value;
+            }
+
+             rep.SaveTemplate(items);
+            ts.MergeAllTranslation(items);
+            
             Console.WriteLine("i18n.PostBuild completed successfully.");
         }
     }
